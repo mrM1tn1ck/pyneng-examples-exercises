@@ -25,4 +25,6 @@
 проверять результат.
 """
 
+# from pprint import pprint
+
 ip = "192.168.3.1"

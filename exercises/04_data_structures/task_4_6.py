@@ -28,3 +28,8 @@ Next-Hop              {}
 Last update           {}
 Outbound Interface    {}
 """
+import re
+
+rep = ospf_route.replace(' ', '').replace('via', '')
+values = re.split(r'[,\[\]]', rep)
+result = template.format(*values)

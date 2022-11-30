@@ -20,5 +20,9 @@
 Это не значит, что задание сделано правильно, просто на данном этапе сложно иначе
 проверять результат.
 """
+import re
 
 config = "switchport trunk allowed vlan 1,3,10,20,30,100"
+
+result = re.findall(r'\d+', config)
+print(result)
