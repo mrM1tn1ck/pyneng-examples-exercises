@@ -27,4 +27,14 @@
 
 # from pprint import pprint
 
-ip = "192.168.3.1"
+ip = '192.168.3.2'
+iplist = ip.split('.')
+intlist = []
+for octet in iplist:
+    octet = int(octet)
+    intlist.append(octet)
+spec = """
+{0:<10}{1:<10}{2:<10}{3:<10}
+{0:08b}  {1:08b}  {2:08b}  {3:08b}"""
+result = spec.format(*intlist)
+print(result)
